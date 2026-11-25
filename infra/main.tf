@@ -83,7 +83,7 @@ resource "aws_instance" "api" {
   user_data_replace_on_change = true
 
   tags = {
-    Name = "aws-devops-api-tf"
+    Name = "aws-devops-api-tf-v2"
   }
 }
 
