@@ -44,6 +44,10 @@ app.delete('/items/:id', (req, res) => {
   res.status(204).end();
 });
 
+app.get('/version', (req, res) => {
+  res.json({ version: process.env.APP_VERSION || 'dev' });
+});
+
 // Unknown route -> JSON 404
 app.use((req, res) => {
   res.status(404).json({ error: 'Not found' });
